@@ -65,4 +65,15 @@ tools:context=".fragement.update.UpdateFragment">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAge" />
 
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

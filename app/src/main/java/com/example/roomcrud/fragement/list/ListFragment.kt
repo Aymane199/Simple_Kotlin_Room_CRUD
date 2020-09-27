@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -48,8 +50,27 @@ class ListFragment : Fragment() {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
 
+        view.buttonDeleteAll.setOnClickListener {
+            deleteAllUsers()
+        }
 
         return view
+    }
+
+    private fun deleteAllUsers() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("yes"){_,_->
+            mUserViewModel.deleteAllUser()
+            Toast.makeText(requireContext(),"Deleted successfully", Toast.LENGTH_LONG).show()
+
+        }
+        builder.setNegativeButton("NO"){_,_->
+
+        }
+        builder.setTitle("Delete all users")
+        builder.setMessage("Are you sure you want to delete all users")
+
+        builder.show()
     }
 
 }

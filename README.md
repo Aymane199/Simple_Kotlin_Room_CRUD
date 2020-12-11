@@ -21,6 +21,6 @@ Navigation refers to the interactions that allow users to navigate across, into,
 - /**viewmodel** (holds all the date needed for the UI)
 
 # License
-Slink android is distributed under the MIT License. 
+Simple_Kotlin_Room_CRUD android is distributed under the MIT License. 
 Copyright (c) 2020 Rizke Aymane.
 
